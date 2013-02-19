@@ -1,8 +1,8 @@
 对微信接口的一层简单封装  
-设置Wechat.php
-define("TOKEN", "微信密钥");
-define("ACCOUNT", "你的微信公众帐号");
-define("PASSWORD", "你的微信公众密码");
+设置Wechat.php  
+	define("TOKEN", "微信密钥");  
+	define("ACCOUNT", "你的微信公众帐号");  
+	define("PASSWORD", "你的微信公众密码");  
 几个参数
 示例代码
 
