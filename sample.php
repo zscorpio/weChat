@@ -6,7 +6,7 @@
 	include("Wechat.php");
 	include("snoopy.php");
 	$wechat = new weChatApi();
-	// 回复消息
+	// 收到消息回复消息
 	if($wechat->checkSignature()){
 		$reply = json_encode($wechat->parse());
 		$wechat->sendText($return["fromUsername"],$return["toUsername"],"text",$reply);
