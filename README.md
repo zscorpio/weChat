@@ -20,3 +20,4 @@
 	// 获取用户信息
 	$data = $wechat->getInfo('1034585');
 	var_dump($data);
+增加了cookie文件存储，每次请求都会验证cookie的可用性，可以去掉验证，然后cron每几分钟生成新cookie
