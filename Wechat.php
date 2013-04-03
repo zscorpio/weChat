@@ -56,6 +56,7 @@ class weChatApi
 		$post['type'] = 1;
 		$post['content'] = $content;
 		$post['ajax'] = 1;
+        $send_snoopy->referer = "http://mp.weixin.qq.com/cgi-bin/singlemsgpage?fromfakeid={$id}&msgid=&source=&count=20&t=wxm-singlechat&lang=zh_CN";
 		$send_snoopy->rawheaders['Cookie']= $this->cookie;
 		$submit = "http://mp.weixin.qq.com/cgi-bin/singlesend?t=ajax-response";
 		$send_snoopy->submit($submit,$post);
@@ -79,6 +80,7 @@ class weChatApi
 			$post['type'] = 1;
 			$post['content'] = $content;
 			$post['ajax'] = 1;
+            $send_snoopy->referer = "http://mp.weixin.qq.com/cgi-bin/singlemsgpage?fromfakeid={$value}&msgid=&source=&count=20&t=wxm-singlechat&lang=zh_CN";
 			$send_snoopy->rawheaders['Cookie']= $this->cookie;
 			$submit = "http://mp.weixin.qq.com/cgi-bin/singlesend?t=ajax-response";
 			$post['tofakeid'] = $value;
